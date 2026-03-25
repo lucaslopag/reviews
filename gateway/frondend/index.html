@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Electronica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tienda Electrónica</h1>
+
+        <div class="controls">
+            <button id="btnShowProducts" onclick="toggleSection('productos')">Mostrar Productos</button>
+            <button id="btnShowComentarios" onclick="toggleSection('comentarios')">Mostrar Comentarios</button>
+        </div>
+
+        <!-- Sección Productos (inicialmente oculta) -->
+        <div id="productosSection" class="section hidden">
+            <h2>Productos</h2>
+
+            <div class="form-row">
+                <input type="text" id="productoNombre" placeholder="Nombre del producto">
+                <input type="text" id="productoDescripcion" placeholder="Descripción">
+                <input type="number" id="productoPrecio" placeholder="Precio" step="0.01">
+                <button onclick="crearProducto()">Añadir producto</button>
+            </div>
+
+            <div class="btn-group">
+                <input type="text" id="productoBuscarNombre" placeholder="Nombre para buscar/actualizar/eliminar">
+                <button onclick="buscarProducto()">Buscar</button>
+                <button onclick="actualizarProducto()">Actualizar</button>
+                <button onclick="eliminarProducto()">Eliminar</button>
+                <button onclick="cargarProductos()">Mostrar lista</button>
+            </div>
+
+            <ul id="listaProductos"></ul>
+        </div>
+
+        <!-- Sección Comentarios (inicialmente oculta) -->
+        <div id="comentariosSection" class="section hidden">
+            <h2>Comentarios</h2>
+
+            <div class="form-row">
+                <input type="text" id="comentario" placeholder="Comentario">
+                <button onclick="crearComentario()">Crear Comentario</button>
+            </div>
+
+            <div class="btn-group">
+                <button onclick="cargarComentarios()">Mostrar comentarios</button>
+            </div>
+
+            <ul id="listaComentarios"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
