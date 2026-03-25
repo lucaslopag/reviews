@@ -1,0 +1,6 @@
+com/proyecto/comentarios/ComentariosApplication.class
+com/proyecto/comentarios/repository/ComentariosRepository.class
+com/proyecto/comentarios/DTO/ComentarioDTO.class
+com/proyecto/comentarios/controller/ComentariosController.class
+com/proyecto/comentarios/services/ComentariosServices.class
+com/proyecto/comentarios/model/Comentarios.class
